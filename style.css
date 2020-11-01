@@ -20,6 +20,11 @@ button {
     padding: 0;
 }
 
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
 button {
     border: none;
     background: none;
@@ -31,8 +36,7 @@ html {
 }
 
 body {
-    background-color: blanchedalmond;
-
+    background-color: #fff6e9;
 }
 
 button {
@@ -68,3 +72,6 @@ img {
     width: 150px;
     height: 40px;
 }
+
+/* COLORS:
+blue: #557d87 */
