@@ -7,3 +7,64 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 *, *:before, *:after {box-sizing: inherit}
 
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+
+/* stripping styles */
+html,
+body, 
+h1,
+h2, 
+p,
+a,
+button {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    border: none;
+    background: none;
+}
+
+/* global styles  */
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: blanchedalmond;
+
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.wrapper {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hide {
+    display: none;
+}
+
+
+/* opening page styles */
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-btn {
+    background-color: cadetblue;
+    width: 150px;
+    height: 40px;
+}
