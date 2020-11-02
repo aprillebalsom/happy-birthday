@@ -13,6 +13,7 @@ html,
 body, 
 h1,
 h2, 
+h3,
 p,
 a,
 button {
@@ -37,9 +38,49 @@ html {
 
 body {
     background-color: #fff6e9;
+    color: #313131;
+
+    letter-spacing: 2px;
+}
+
+header {
+    padding: 40px 0 60px;
+}
+
+header,
+.foot {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Gilda Display', serif;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: clamp(2.2rem, 2.6vw, 3rem);
+}
+
+h2,
+h3 {
+    font-size: clamp(2rem, 2.2vw, 2.4rem);
+
+}
+
+p,
+button {
+    font-family: 'Biryani', sans-serif;
+    font-size: clamp(1.8rem, 2vw, 2.2rem);
 }
 
 button {
+    text-transform: uppercase;
+
     cursor: pointer;
 }
 
@@ -54,24 +95,79 @@ img {
     margin: 0 auto;
 }
 
-.hide {
-    display: none;
-}
-
-
-/* opening page styles */
-
 .flex-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.main-btn {
-    background-color: cadetblue;
-    width: 150px;
-    height: 40px;
+/* opening page styles */
+.first-page {
+    height: 85vh;
 }
 
-/* COLORS:
-blue: #557d87 */
+.highlight {
+    text-transform: uppercase;
+}
+
+.main-btn {
+    background-color: #7fa4ad;
+
+    width: 330px;
+    height: 70px;
+}
+
+/* second page styles */
+.main-photo {
+    width: auto;
+    height: 700px;
+}
+
+.text {
+    width: 70%;
+    padding: 40px 0;
+}
+
+.text h2 {
+    padding-bottom: 20px;
+}
+
+.party-btns {
+    width: 100%;
+    padding-bottom: 60px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.party-btn {
+    background-color: #7fa4ad;
+
+    width: calc((100% / 3) - 20px);
+    height: 50px;
+}
+
+/* third section */
+.next-page h3 {
+    padding-bottom: 20px;
+}
+
+.second-btn {
+    background-color: #7fa4ad;
+
+    padding: 20px 30px;
+}
+
+
+
+.hide {
+    display: none;
+}
+
+/* footer */
+
+footer p {
+    font-size: 1.6rem;
+}
