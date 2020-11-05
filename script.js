@@ -5,19 +5,19 @@ bdayapp.hat = [
         name:'party-hat',
         image: './assets/party-hat.png',
         alt: 'A party hat.',
-        class: 'party-items party-hat'
+        class: 'party-items hat party-hat'
     },
     {
         name: 'top-hat',
         image: './assets/top-hat.png',
         alt: 'A top hat.',
-        class: 'party-items top-hat'
+        class: 'party-items hat top-hat'
     },
     {
         name: 'head-band',
         image: './assets/star-headband.png',
         alt: 'A star headband.',
-        class: 'party-items head-band'
+        class: 'party-items hat head-band'
     }
 ]
 
@@ -26,19 +26,19 @@ bdayapp.cat = [
         name: 'cat-1',
         image: './assets/cat.png',
         alt: 'A white cat lying on a chair.',
-        class: 'party-items cat-1'
+        class: 'party-items cat cat-1'
     },
     {
         name: 'cat-2',
         image: './assets/cat.png',
         alt: `A white cat sitting on a man's head.`,
-        class: 'party-items cat-2'
+        class: 'party-items cat cat-2'
     },
     {
         name: 'cat-3',
         image: './assets/cat.png',
         alt: 'A white cat lying on a ledge.',
-        class: 'party-items cat-3'
+        class: 'party-items cat cat-3'
     }
 ]
 
@@ -47,19 +47,19 @@ bdayapp.surprise = [
         name: 'funky-glasses',
         image: './assets/funky-glasses.png',
         alt: 'Funky sunglasses.',
-        class: 'party-items funky-glasses'
+        class: 'party-items surprise funky-glasses'
     },
     {
         name: 'bacon-socks',
         image: '/assets/bacon-socks.png',
         alt: `Funky socks.`,
-        class: 'party-items bacon-socks'
+        class: 'party-items surprise bacon-socks'
     },
     {
         name: 'dilly-bar',
         image: './assets/dilly-bar.png',
         alt: 'A dilly bar icecream from Dairy Queen.',
-        class: 'party-items dilly-bar'
+        class: 'party-items surprise dilly-bar'
     }
 ]
 
@@ -86,45 +86,41 @@ bdayapp.selectPartyItems = function () {
 
     const btns = document.querySelectorAll('.party-btn');
 
+    // for each button, add an event listener
     btns.forEach((btn) => {
         btn.addEventListener('click', (event) => {
             const btnId = event.target.id;
-        
-            if (btnId === 'hat'){
-                bdayapp.randomizePartyItems(bdayapp.hat);
-
-            } else if (btnId === 'cat') {
-                bdayapp.randomizePartyItems(bdayapp.cat);
-
-            } else if (btnId === 'surprise') {
-                bdayapp.randomizePartyItems(bdayapp.surprise);
-
-            }
+            bdayapp.randomizePartyItems(bdayapp[btnId]);
         });
     })
 }
 
+// randomizer function that selects a random item from array
 bdayapp.randomizePartyItems = function (array) {
+
     const rndmPartyItem = Math.floor(Math.random() * array.length);
     
     bdayapp.displayPartyItems(array[rndmPartyItem]);
 }
 
-
+// displays the random item on the page
 bdayapp.displayPartyItems = function (item) {
+
+    // if (item.name === )
    
     const image = document.createElement('img');
     image.setAttribute('src', `${item.image}`);
     image.setAttribute('alt',`${item.alt}`);
     image.setAttribute('class', `${item.class}`);
    
-
     const photo = document.querySelector('.photo');
     photo.appendChild(image);
+    
+    
 }
 
+// displayed the bday card message
 bdayapp.displayMsg = function () {
-
 
     const btn = document.getElementById('second-btn');
     const third = document.getElementById('third-page');
@@ -141,7 +137,6 @@ bdayapp.displayMsg = function () {
 
         third.classList.toggle('hide');
     });
-
 }
 
 // function that kicks off the app
