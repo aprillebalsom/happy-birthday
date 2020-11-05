@@ -80,8 +80,11 @@ button {
 
 button {
     background-color: #7fa4ad;
+    border: 1px solid #313131;
 
     text-transform: uppercase;
+    letter-spacing: 2px;
+
 
     cursor: pointer;
     transition: .5s ease-in-out;
@@ -90,7 +93,7 @@ button {
 button:hover, 
 button:focus {
     color: #fff6e9;
-    letter-spacing: 2.2px;
+    letter-spacing: 2.4px;
 }
 
 img {
@@ -126,9 +129,80 @@ img {
 }
 
 /* second page styles */
+.photo {
+    position: relative;
+}
+
 .main-photo {
     width: auto;
     height: 700px;
+}
+
+.party-items {
+    position: absolute;
+}
+
+.party-hat {
+    width: 62px;
+
+    top: 165px;
+    right: 194px;
+}
+
+.top-hat {
+    width: 80px;
+
+    top: 185px;
+    right: 183px;
+}
+
+.head-band {
+    width: 73px;
+
+    top: 175px;
+    right: 197px;
+}
+
+.cat-1,
+.cat-2,
+.cat-3 {
+    width: 120px;
+}
+
+.cat-1 {
+    bottom: 210px;
+}
+
+.cat-2 {
+   top: 192px;
+   right: 170px;
+}
+
+.cat-3 {
+    top: 270px;
+    right: 20px;
+}
+
+.bacon-socks {
+    width: 240px;
+
+    bottom: 32px;
+    right: 39px;
+}
+
+.funky-glasses {
+    width: 60px;
+
+    top: 253px;
+    right: 193px;
+}
+
+.dilly-bar {
+    width: 40px;
+
+    bottom: 315px;
+    left: 157px;
+
 }
 
 .text {
@@ -163,6 +237,72 @@ img {
    width: 450px;
    height: 60px;
 }
+
+/* modal styles */
+.modal {
+    background-color: #30303090;
+    width: 100%;
+    height: 100%; 
+    padding-top: 150px;
+    position: fixed; 
+    left: 0; 
+    top: 0;
+    bottom: 0;
+    z-index: 100;
+}
+
+.modal-content {
+    background-color: #fff6e9;
+    border-radius: 10px;
+    padding: 30px; 
+    margin: auto; 
+    width: 55%;  
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+/* 
+.modalContent h3 {
+  letter-spacing: 3px;
+  padding: 20px 0 10px;
+}
+
+.modalContent p {
+  text-align: center;
+} */
+
+.close-modal {
+    color: #7fa4ad;
+    border-radius: 50%;
+    width: 45px;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    transition: all .4s;
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px; 
+        opacity: 0;
+    }
+
+    to {
+        top: 0; 
+        opacity: 1;
+    }
+}
+
+
 
 
 

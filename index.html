@@ -27,28 +27,28 @@
                 <img class="main-photo" src="./assets/daddy.jpg" alt="Daddy sitting in the sun reading the newspaper.">
 
                 <!-- hat -->
-                <!-- <img src="" alt="A party hat.">
-                <img src="" alt="A top hat.">
-                <img src="" alt="A star headband."> -->
+                <img class="party-items party-hat hide" src="./assets/party-hat.png" alt="A party hat.">
+                <img class="party-items top-hat hide" src="./assets/top-hat.png" alt="A top hat."> 
+                <img class="party-items head-band hide" src="./assets/star-headband.png" alt="A star headband."> 
 
                 <!-- cat -->
-                <!-- <img src="" alt="A white cat lying on a chair.">
-                <img src="" alt="A white cat sitting on a man's head.">
-                <img src="" alt="A white cat lying on a ledge."> -->
+                <img class="party-items cat-1 hide" src="./assets/cat.png" alt="A white cat lying on a chair.">
+                <img class="party-items cat-2 hide" src="./assets/cat.png" alt="A white cat sitting on a man's head.">
+                <img class="party-items cat-3 hide" src="./assets/cat.png" alt="A white cat lying on a ledge."> 
 
                 <!-- surprise -->
-                <!-- <img src="" alt="Funky sunglasses.">
-                <img src="" alt="Funky socks.">
-                <img src="" alt="A dilly bar icecream from Dairy Queen."> -->
+                <img class="party-items funky-glasses hide" src="./assets/funky-glasses.png" alt="Funky sunglasses.">
+                <img class=" party-items bacon-socks hide" src="./assets/bacon-socks.png" alt="Funky socks.">
+                <img class="party-items dilly-bar hide" src="./assets/dilly-bar.png" alt="A dilly bar icecream from Dairy Queen."> 
             </div>
 
             <div class="text flex-container">
                 <h2>Get Daddy party ready!</h2>
 
                 <div class="party-btns">
-                    <button class="party-btn">Pick a hat</button>
-                    <button class="party-btn">Pick a cat</button>
-                    <button class="party-btn">Pick a surprise</button>
+                    <button id="hat" class="party-btn">Pick a hat</button>
+                    <button id="cat" class="party-btn">Pick a cat</button>
+                    <button id="surprise" class="party-btn">Pick a surprise</button>
                 </div>
 
                 <div class="next-page flex-container">
@@ -59,10 +59,16 @@
             
         </section>
 
-        <section id="third-page" class="third-page hide flex-container">
+        <section id="third-page" class="third-page modal hide flex-container">
 
-            <h2>Happy Birthday Daddy!</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In laboriosam, impedit at cum ipsam accusamus architecto doloribus, ullam quas reiciendis non fuga nostrum culpa exercitationem, quidem dicta nulla pariatur saepe accusantium facilis! Debitis, et tempora. Saepe modi aut rem magnam eos, harum et voluptatum iste delectus adipisci quam, quasi laboriosam?</p>
+            <div class="modal-content">
+                <h2>Happy Birthday Daddy!</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In laboriosam, impedit at cum ipsam accusamus architecto doloribus, ullam quas reiciendis non fuga nostrum culpa exercitationem, quidem dicta nulla pariatur saepe accusantium facilis! Debitis, et tempora. Saepe modi aut rem magnam eos, harum et voluptatum iste delectus adipisci quam, quasi laboriosam?</p>
+                <button id="exit" class="close-modal">
+                    <span class="sr-only">Exit out of pop-up</span>
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
             
         </section>
     </main>
@@ -73,6 +79,7 @@
         </div>
     </footer>
     
+    <script src="https://kit.fontawesome.com/a17f5cc577.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
 </html>
