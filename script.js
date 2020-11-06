@@ -5,19 +5,22 @@ bdayapp.hat = [
         name:'party-hat',
         image: './assets/party-hat.png',
         alt: 'A party hat.',
-        class: 'party-items hat party-hat'
+        class: 'party-items hat party-hat',
+        show: false
     },
     {
         name: 'top-hat',
         image: './assets/top-hat.png',
         alt: 'A top hat.',
-        class: 'party-items hat top-hat'
+        class: 'party-items hat top-hat',
+        show: false
     },
     {
         name: 'head-band',
         image: './assets/star-headband.png',
         alt: 'A star headband.',
-        class: 'party-items hat head-band'
+        class: 'party-items hat head-band',
+        show: false
     }
 ]
 
@@ -26,19 +29,22 @@ bdayapp.cat = [
         name: 'cat-1',
         image: './assets/cat.png',
         alt: 'A white cat lying on a chair.',
-        class: 'party-items cat cat-1'
+        class: 'party-items cat cat-1',
+        show: false
     },
     {
         name: 'cat-2',
         image: './assets/cat.png',
         alt: `A white cat sitting on a man's head.`,
-        class: 'party-items cat cat-2'
+        class: 'party-items cat cat-2',
+        show: false
     },
     {
         name: 'cat-3',
         image: './assets/cat.png',
         alt: 'A white cat lying on a ledge.',
-        class: 'party-items cat cat-3'
+        class: 'party-items cat cat-3',
+        show: false
     }
 ]
 
@@ -47,19 +53,22 @@ bdayapp.surprise = [
         name: 'funky-glasses',
         image: './assets/funky-glasses.png',
         alt: 'Funky sunglasses.',
-        class: 'party-items surprise funky-glasses'
+        class: 'party-items surprise funky-glasses',
+        show: false
     },
     {
         name: 'bacon-socks',
         image: '/assets/bacon-socks.png',
         alt: `Funky socks.`,
-        class: 'party-items surprise bacon-socks'
+        class: 'party-items surprise bacon-socks',
+        show: false
     },
     {
         name: 'dilly-bar',
         image: './assets/dilly-bar.png',
         alt: 'A dilly bar icecream from Dairy Queen.',
-        class: 'party-items surprise dilly-bar'
+        class: 'party-items surprise dilly-bar',
+        show: false
     }
 ]
 
@@ -90,6 +99,8 @@ bdayapp.selectPartyItems = function () {
     btns.forEach((btn) => {
         btn.addEventListener('click', (event) => {
             const btnId = event.target.id;
+            bdayapp[btnId].show = true;
+            // console.log(bdayapp[btnId]);
             bdayapp.randomizePartyItems(bdayapp[btnId]);
         });
     })
@@ -99,6 +110,12 @@ bdayapp.selectPartyItems = function () {
 bdayapp.randomizePartyItems = function (array) {
 
     const rndmPartyItem = Math.floor(Math.random() * array.length);
+    console.log(array.show)
+    // if (array.show == true) {
+    //     console.log(array.name)
+    // } else {
+    //     console.log('nothing');
+    // }
     
     bdayapp.displayPartyItems(array[rndmPartyItem]);
 }
@@ -106,7 +123,6 @@ bdayapp.randomizePartyItems = function (array) {
 // displays the random item on the page
 bdayapp.displayPartyItems = function (item) {
 
-    // if (item.name === )
    
     const image = document.createElement('img');
     image.setAttribute('src', `${item.image}`);
