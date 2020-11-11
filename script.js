@@ -54,7 +54,7 @@ bdayapp.surprise = [
     },
     {
         name: 'bacon-socks',
-        image: '/assets/bacon-socks.png',
+        image: './assets/bacon-socks.png',
         alt: `Funky socks.`,
         class: 'party-items surprise bacon-socks',
     },
