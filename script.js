@@ -30,21 +30,18 @@ bdayapp.cat = [
         image: './assets/cat.png',
         alt: 'A white cat lying on a chair.',
         class: 'party-items cat cat-1',
-        show: false
     },
     {
         name: 'cat-2',
         image: './assets/cat.png',
         alt: `A white cat sitting on a man's head.`,
         class: 'party-items cat cat-2',
-        show: false
     },
     {
         name: 'cat-3',
         image: './assets/cat.png',
         alt: 'A white cat lying on a ledge.',
         class: 'party-items cat cat-3',
-        show: false
     }
 ]
 
@@ -54,21 +51,18 @@ bdayapp.surprise = [
         image: './assets/funky-glasses.png',
         alt: 'Funky sunglasses.',
         class: 'party-items surprise funky-glasses',
-        show: false
     },
     {
         name: 'bacon-socks',
         image: '/assets/bacon-socks.png',
         alt: `Funky socks.`,
         class: 'party-items surprise bacon-socks',
-        show: false
     },
     {
         name: 'dilly-bar',
         image: './assets/dilly-bar.png',
         alt: 'A dilly bar icecream from Dairy Queen.',
         class: 'party-items surprise dilly-bar',
-        show: false
     }
 ]
 
@@ -100,7 +94,7 @@ bdayapp.selectPartyItems = function () {
         btn.addEventListener('click', (event) => {
             const btnId = event.target.id;
             bdayapp[btnId].show = true;
-            // console.log(bdayapp[btnId]);
+            console.log(bdayapp[btnId]);
             bdayapp.randomizePartyItems(bdayapp[btnId]);
         });
     })
@@ -110,15 +104,16 @@ bdayapp.selectPartyItems = function () {
 bdayapp.randomizePartyItems = function (array) {
 
     const rndmPartyItem = Math.floor(Math.random() * array.length);
-    console.log(array.show)
-    // if (array.show == true) {
-    //     console.log(array.name)
+    console.log(array[rndmPartyItem])
+    // if (array[rndmPartyItem].show === true) {
+    //     console.log(array[rndmPartyItem].name)
     // } else {
     //     console.log('nothing');
     // }
     
     bdayapp.displayPartyItems(array[rndmPartyItem]);
 }
+const photo = document.querySelector('.photo');
 
 // displays the random item on the page
 bdayapp.displayPartyItems = function (item) {
@@ -127,12 +122,21 @@ bdayapp.displayPartyItems = function (item) {
     const image = document.createElement('img');
     image.setAttribute('src', `${item.image}`);
     image.setAttribute('alt',`${item.alt}`);
-    image.setAttribute('class', `${item.class}`);
+    image.setAttribute('class', `${item.class} test`);
    
-    const photo = document.querySelector('.photo');
+    // const photo = document.querySelector('.photo');
     photo.appendChild(image);
     
-    
+    bdayapp.removePartyItems();
+}
+
+bdayapp.removePartyItems = function () {
+
+    const remove = document.getElementById('reset');
+
+    remove.addEventListener('click', () => {
+        $('.test').remove();
+    })
 }
 
 // displayed the bday card message

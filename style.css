@@ -75,13 +75,18 @@ h3 {
 p,
 button {
     font-family: 'Biryani', sans-serif;
+}
+
+p {
     font-size: clamp(1.8rem, 2vw, 2.2rem);
+
 }
 
 button {
     background-color: #7fa4ad;
     border: 1px solid #313131;
 
+    font-size: clamp(1.6rem, 1.8vw, 2rem);
     text-transform: uppercase;
     letter-spacing: 2px;
 
@@ -236,9 +241,9 @@ img {
     align-items: center;
 }
 
-.party-btn {
-    width: calc((100% / 3) - 20px);
-    height: 50px;
+.btn {
+    width: calc((100% / 4) - 20px);
+    height: 70px;
 }
 
 /* third section */
@@ -256,7 +261,7 @@ img {
     background-color: #30303090;
     width: 100%;
     height: 100%; 
-    padding-top: 150px;
+    /* padding-top: 100px; */
     position: fixed; 
     left: 0; 
     top: 0;
@@ -269,8 +274,8 @@ img {
     border-radius: 10px;
     padding: 30px; 
     margin: auto; 
-    width: 55%;  
-    height: 35%;
+    width: 600px;  
+    height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -279,23 +284,18 @@ img {
     animation-name: animatetop;
     animation-duration: 0.4s
 }
-/* 
-.modalContent h3 {
-  letter-spacing: 3px;
-  padding: 20px 0 10px;
-}
 
-.modalContent p {
-  text-align: center;
-} */
+.modal-content h2 {
+    padding-bottom: 20px;
+}
 
 .close-modal {
     color: #7fa4ad;
-    border-radius: 50%;
-    width: 45px;
+    background: none;
+    border: none;
     position: absolute;
-    top: -5px;
-    left: -5px;
+    top: 10px;
+    left: 10px;
 }
 
 .close-modal:hover,
@@ -314,10 +314,6 @@ img {
         opacity: 1;
     }
 }
-
-
-
-
 
 .hide {
     display: none;
