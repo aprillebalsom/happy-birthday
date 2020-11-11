@@ -122,7 +122,7 @@ bdayapp.displayPartyItems = function (item) {
     const image = document.createElement('img');
     image.setAttribute('src', `${item.image}`);
     image.setAttribute('alt',`${item.alt}`);
-    image.setAttribute('class', `${item.class}`);
+    image.setAttribute('class', `${item.class} remove`);
    
     // const photo = document.querySelector('.photo');
     photo.appendChild(image);
@@ -135,7 +135,7 @@ bdayapp.removePartyItems = function () {
     const remove = document.getElementById('reset');
 
     remove.addEventListener('click', () => {
-        $('.test').remove();
+        $('.remove').remove();
     })
 }
 
