@@ -122,7 +122,7 @@ bdayapp.displayPartyItems = function (item) {
     const image = document.createElement('img');
     image.setAttribute('src', `${item.image}`);
     image.setAttribute('alt',`${item.alt}`);
-    image.setAttribute('class', `${item.class} test`);
+    image.setAttribute('class', `${item.class}`);
    
     // const photo = document.querySelector('.photo');
     photo.appendChild(image);

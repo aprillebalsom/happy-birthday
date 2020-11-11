@@ -40,6 +40,7 @@ body {
     background-color: #fff6e9;
     color: #313131;
 
+    text-align: center;
     letter-spacing: 2px;
 }
 
@@ -69,7 +70,6 @@ h1 {
 h2,
 h3 {
     font-size: clamp(2rem, 2.2vw, 2.4rem);
-
 }
 
 p,
@@ -79,7 +79,6 @@ button {
 
 p {
     font-size: clamp(1.8rem, 2vw, 2.2rem);
-
 }
 
 button {
@@ -89,7 +88,6 @@ button {
     font-size: clamp(1.6rem, 1.8vw, 2rem);
     text-transform: uppercase;
     letter-spacing: 2px;
-
 
     cursor: pointer;
     transition: .5s ease-in-out;
@@ -151,76 +149,76 @@ img {
     position: relative;
 }
 
-.main-photo {
+/* .main-photo {
     width: auto;
     height: 700px;
-}
+} */
 
 .party-items {
     position: absolute;
 }
 
 .party-hat {
-    width: 62px;
+    width: 13%;
 
-    top: 165px;
-    right: 194px;
+    top: 22%;
+    right: 42%;
 }
 
 .top-hat {
-    width: 80px;
+    width: 16%;
 
-    top: 185px;
-    right: 183px;
+    top: 26%;
+    right: 40%;
 }
 
 .head-band {
-    width: 73px;
+    width: 15%;
 
-    top: 175px;
-    right: 197px;
+    top: 25%;
+    right: 42%;
 }
 
 .cat-1,
 .cat-2,
 .cat-3 {
-    width: 120px;
+    width: 23%;
 }
 
 .cat-1 {
-    bottom: 210px;
+    right: 75%;
+    top: 61%;
 }
 
 .cat-2 {
-   top: 192px;
-   right: 170px;
+    right: 37%;
+    bottom: 63%;
 }
 
 .cat-3 {
-    top: 270px;
-    right: 20px;
+    top: 38%;
+    right: 5%;
 }
 
 .bacon-socks {
-    width: 240px;
+    width: 54%;
 
-    bottom: 32px;
-    right: 39px;
+    bottom: 4%;
+    right: 7%;
 }
 
 .funky-glasses {
-    width: 60px;
+    width: 12%;
 
-    top: 253px;
-    right: 193px;
+    top: 36%;
+    right: 42%;
 }
 
 .dilly-bar {
-    width: 40px;
+    width: 10%;
 
-    bottom: 315px;
-    left: 157px;
-
+    bottom: 44%;
+    left: 34%;
 }
 
 .text {
@@ -323,4 +321,26 @@ img {
 
 footer p {
     font-size: 1.6rem;
+}
+
+
+@media (max-width: 940px) {
+
+    .party-btns {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+        margin: 5px;
+    }
+
+    .second-btn {
+        width: 100%;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+
 }
